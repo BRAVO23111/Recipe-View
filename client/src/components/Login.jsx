@@ -12,7 +12,7 @@ const Login = () => {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/auth/login", {
+      const response = await axios.post("https://recipe-view-6gfcydte1-bravo23111.vercel.app/auth/login", {
         username,
         password
       });
