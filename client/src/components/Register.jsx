@@ -6,11 +6,11 @@ const Register = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  axios.defaults.withCredentials = true;
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://recipe-view-pi.vercel.app/auth/register", {
+      const response = await axios.post("http://localhost:3000/auth/register", {
         username,
         password
       });

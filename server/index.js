@@ -6,11 +6,7 @@ import { RecipeRouter } from "./controllers/Recipes.js";
 
 const app = express();
 
-app.use(cors({
-    origin : ["https://recipe-view-frontend.vercel.app"],
-    methods : ["POST" , "GET" ,"PUT"],
-    credentials :true
-}));
+app.use(cors());
 app.use(express.json());
 
 const db = mongoose.connect("mongodb+srv://mukherjeed681:test@cluster0.2yulhdy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
