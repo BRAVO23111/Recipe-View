@@ -7,7 +7,7 @@ import { RecipeRouter } from "./controllers/Recipes.js";
 const app = express();
 
 app.use(cors({
-    origin : ["https://recipe-view-backend.vercel.app"],
+    origin : ["https://recipe-view-frontend.vercel.app"],
     methods : ["GET", "POST" ,"PUT"],
     credentials :true
 }));
