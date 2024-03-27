@@ -23,7 +23,7 @@ const Home = () => {
     const fetchsavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/recipe/savedRecipes/ids/${userid}`
+          `https://recipe-view-pi.vercel.app/recipe/savedRecipes/ids/${userid}`
         );
         setsavedRecipes(response.data.savedRecipe || []);
       } catch (error) {
@@ -33,7 +33,7 @@ const Home = () => {
     const fetchUserName = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/recipe/username/${userid}`
+          `https://recipe-view-pi.vercel.app/recipe/username/${userid}`
         );
         setUserName(response.data.username || '');
       } catch (error) {
@@ -48,7 +48,7 @@ const Home = () => {
   const saveRecipe = async (recipeid) => {
     try {
       const response = await axios.put(
-        "http://localhost:3000/recipe",
+        "https://recipe-view-pi.vercel.app/recipe",
         {
           recipeid,
           userid,
