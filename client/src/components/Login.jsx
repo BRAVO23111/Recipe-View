@@ -8,11 +8,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [, setCookie] = useCookies(['access_token']);
   const navigate = useNavigate();
-
+  axios.defaults.withCredentials = true
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://recipe-view-6gfcydte1-bravo23111.vercel.app/auth/login", {
+      const response = await axios.post("https://recipe-view-pi.vercel.app/auth/login", {
         username,
         password
       });
